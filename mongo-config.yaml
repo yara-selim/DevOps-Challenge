@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: mongo-config
 data:
-  mongo-url: mongo-service
+  MONGODB_URI: mongodb://${MONGO_ROOT_USER}:${MONGO_ROOT_PASSWORD}@mongo-service/conduit
