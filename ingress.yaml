@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-webapp
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /brew install helm
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - http:
+        paths:
+        - path: / 
+          backend:
+            serviceName: webapp-service
+            servicePort: 3000
